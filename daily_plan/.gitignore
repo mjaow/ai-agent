@@ -9,3 +9,5 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+output.log
+last_update_id.txt

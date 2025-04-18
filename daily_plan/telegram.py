@@ -14,9 +14,8 @@ def send_telegram_message(message, additional_chat_id):
     notify_ids = CHAT_IDS + [additional_chat_id]
     merged = list(set(notify_ids))
 
-    print("=========", merged)
-
     for chat_id in merged:
+        print(f"推送给chat_id: {chat_id}")
         data = {"chat_id": chat_id, "text": message}
         try:
             response = requests.post(url, data=data)
