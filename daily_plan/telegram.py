@@ -7,6 +7,7 @@ load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")  # 替换为你的 Telegram Bot Token
 CHAT_IDS = [
     7716933130, # mine
+    6532819824,
 ]
 
 def send_telegram_message(message, additional_chat_id):
