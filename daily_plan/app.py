@@ -154,7 +154,7 @@ def schedule_plan_notification(plan, chat_id):
 
             delay = (start_time - now).total_seconds()
             if delay > 0:
-                tm = threading.Timer(delay, send_telegram_message, args=[f"现在开始：{item['topic']} 目标：{item['goal']} 建议：{item['advice']}", chat_id])
+                tm = threading.Timer(delay, send_telegram_message, args=[f"现在开始计划（ {item['time']} ）：{item['topic']} 目标：{item['goal']} 建议：{item['advice']}", chat_id])
                 tm.start()
                 scheduled_tasks.append(tm)
         except Exception as e:
